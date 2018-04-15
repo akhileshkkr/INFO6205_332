@@ -16,7 +16,7 @@ public class Main {
         final int NumberOfEmps = 4;
         
         int NumberOfDays = 7;
-        int numberOfShifts = 6;
+        int numberOfShifts = 5;
         int graphLength = NumberOfDays * numberOfShifts;
 
         
@@ -24,7 +24,8 @@ public class Main {
 
         Population pop = new Population(populationSize, true, NumberOfEmps);
 
-        LOGGER.info("Current fittest employee shift list : "+ pop.getFittest().toString());
+        LOGGER.info("Current fittest employee shift list : ");
+        pop.printSchedule();
         LOGGER.info("fitness : " + pop.getFittest().getFitness());
         pop.getFittest().displayWrongEmp();
 
@@ -33,7 +34,8 @@ public class Main {
         }
 
         LOGGER.info(String.format("After %d breed the employee shift list : ", generations));
-        LOGGER.info(pop.getFittest().toString() + "fitness : " + pop.getFittest().getFitness());
+        pop.printSchedule();
+        LOGGER.info( "fitness : " + pop.getFittest().getFitness());
         pop.getFittest().displayWrongEmp();
     }
 }

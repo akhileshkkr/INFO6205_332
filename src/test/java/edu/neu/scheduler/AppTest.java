@@ -31,11 +31,11 @@ public class AppTest {
         ScheduleGenerator graph2 = new ScheduleGenerator(shifts);
     }
 
-    @Test(expected=ScheduleGenerator.InvalidEdgeCountException.class)
+    @Test
     public void testGraphGenerator1() throws ScheduleGenerator.InvalidEdgeCountException {
        int shifts = 7;
        int days = 7;
         ScheduleGenerator graph1 = new ScheduleGenerator(shifts);
-        assertEquals(shifts*days, graph1.getVertexCount());
+        assertEquals(shifts, graph1.getVertexCount());
     }
 }

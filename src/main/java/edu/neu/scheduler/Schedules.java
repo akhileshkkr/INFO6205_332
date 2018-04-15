@@ -10,7 +10,7 @@ package edu.neu.scheduler;
  * @author Akhilesh Kashyap
  */
 public class Schedules {
-    public void createSchedules(){
+    public static void createSchedules(){
     int shifts[][]=new int[21][21];
     String days[] = {"M", "T", "W", "TH", "F", "S", "SU"};
     String batch[] = {"M", "E", "N"};

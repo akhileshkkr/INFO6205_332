@@ -25,8 +25,8 @@ public class GaAlgorithm {
         }
 
         for (int i = eliteOffset; i < newPopulation.getSize(); i++) {
-            EmpList parent1 = tournamentSelection(pop);
-            EmpList parent2 = tournamentSelection(pop);
+            EmpList parent1 = Selection(pop);
+            EmpList parent2 = Selection(pop);
             EmpList child = crossOver(parent1, parent2);
             newPopulation.setEmpList(i, child);
         }
@@ -91,7 +91,7 @@ public class GaAlgorithm {
         }
     }
 
-    public static EmpList tournamentSelection(Population pop) {
+    public static EmpList Selection(Population pop) {
         Population selectionCandidate = new Population(tournamentSize, false, 0);
 
         for (int i = 0; i < tournamentSize; i++) {
